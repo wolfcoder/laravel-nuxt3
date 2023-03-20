@@ -24,7 +24,8 @@ async function login(payload: LoginPayload) {
   await axios.get("http://localhost/sanctum/csrf-cookie");
   await axios.post("http://localhost/login", payload);
 
-  let { data} = await axios.get("http://localhost/user");
+  let { data} = await axios.get("http://localhost/api/user");
+  console.log(data)
   user.value = data;
 }
 
