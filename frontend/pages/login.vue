@@ -2,7 +2,7 @@
 import axios from "axios";
 
 axios.defaults.withCredentials = true;
-axios.defaults.headers.common["Access-Control-Allow-Origin"] = true;
+
 
 definePageMeta({
   layout: "centered",
@@ -21,10 +21,10 @@ const form = ref({
 const user = ref({});
 
 async function login(payload: LoginPayload) {
-  await axios.get("http://localhost/sanctum/csrf-cookie");
-  await axios.post("http://localhost/login", payload);
 
-  let { data} = await axios.get("http://localhost/user");
+  await axios.post("/login", payload);
+
+  let { data} = await axios.get("/user");
   user.value = data;
 }
 

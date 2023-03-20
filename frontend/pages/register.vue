@@ -21,7 +21,7 @@ const form = ref({
 });
 
 async function register(payload: RegisterPayload) {
-  const res = await axios.post("/register", payload);
+  await axios.post("/register", payload);
   await useRouter().push("/me");
 }
 </script>
