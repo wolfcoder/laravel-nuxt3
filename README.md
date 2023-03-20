@@ -40,8 +40,9 @@ npm run preview
 ```
 
 ## Laravel Start on terminal backend
+this is important to running with port 80, to resolve issue error "csrf token mismatch"
 ```bash
-php artisan serve --host=localhost 
+php artisan serve --host=localhost --port=80 
 ```
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 

@@ -5,7 +5,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "api": "php artisan serve --host=localhost --port=80"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.6.0",

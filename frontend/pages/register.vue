@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import axios from "axios";
+import {useRouter} from "#app";
 
 definePageMeta({
   layout: "centered",
@@ -21,7 +22,7 @@ const form = ref({
 
 async function register(payload: RegisterPayload) {
   const res = await axios.post("/register", payload);
-  console.log(res);
+  await useRouter().push("/me");
 }
 </script>
 <template>
